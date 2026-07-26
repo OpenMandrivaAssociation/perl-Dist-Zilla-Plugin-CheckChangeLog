@@ -1,15 +1,13 @@
 %define upstream_name    Dist-Zilla-Plugin-CheckChangeLog
-%define upstream_version 0.05
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.05
+Release:	2
 
 Summary:	Dist::Zilla with Changes check
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/fayland/dist-zilla-plugin-checkchangelog
-Source0:	https://cpan.metacpan.org/authors/id/F/FA/FAYLAND/Dist-Zilla-Plugin-CheckChangeLog-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/F/FA/FAYLAND/Dist-Zilla-Plugin-CheckChangeLog-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +18,7 @@ BuildArch:	noarch
 The code is mostly a copy-paste of the ShipIt::Step::CheckChangeLog manpage.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
